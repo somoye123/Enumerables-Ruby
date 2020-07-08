@@ -12,6 +12,14 @@ module Enumerable
       count += 1
     end
   end
+
+  def my_select
+    filtered_array = []
+    each do |i|
+      filtered_array.push(i) if yield i
+    end
+    filtered_array
+  end
 end
 
 test_array = [1, 2, 3, 4, 5]
