@@ -68,6 +68,9 @@ module Enumerable
   end
 end
 
+def multiply_els(arr)
+  puts(arr.my_inject { |a, b| a * b })
+end
 
 test_array = [1, 2, 3, 4, 5]
 
