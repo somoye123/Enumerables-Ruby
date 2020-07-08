@@ -4,6 +4,14 @@ module Enumerable
       yield i
     end
   end
+
+  def my_each_with_index
+    count = 0
+    while count < length
+      yield(self[count], count)
+      count += 1
+    end
+  end
 end
 
 test_array = [1, 2, 3, 4, 5]
@@ -16,4 +24,12 @@ test_array = [1, 2, 3, 4, 5]
 
 # test_array.my_all? { |number| number >= 1 }
 
-# test_array.my_all? { |number| number >= 1 }
+# puts(test_array.my_any? { |number| number <= 1 })
+
+# puts(test_array.my_none? { |number| number < 1 })
+
+# puts test_array.my_count
+
+# puts(test_array.my_map { |i| i * 2 })
+
+test_array.inj
