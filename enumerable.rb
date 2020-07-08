@@ -34,6 +34,13 @@ module Enumerable
     end
     false
   end
+
+  def my_none?
+    each do |i|
+      return false if yield i
+    end
+    true
+  end
 end
 
 test_array = [1, 2, 3, 4, 5]
