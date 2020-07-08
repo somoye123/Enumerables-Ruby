@@ -45,6 +45,14 @@ module Enumerable
   def my_count
     length
   end
+
+  def my_map
+    mapped_array = []
+    each do |i|
+      mapped_array.push(yield i)
+    end
+    mapped_array
+  end
 end
 
 test_array = [1, 2, 3, 4, 5]
