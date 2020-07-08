@@ -48,6 +48,11 @@ module Enumerable
 
   def my_map(some_proc = nil)
     mapped_array = []
+    if some_proc
+      each do |i|
+        mapped_array.push(some_proc.call(i))
+      end
+    else
       each do |i|
         mapped_array.push(yield i)
       end
