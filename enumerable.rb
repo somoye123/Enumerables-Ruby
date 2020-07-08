@@ -27,6 +27,13 @@ module Enumerable
     end
     puts true
   end
+
+  def my_any?
+    each do |i|
+      return true if yield i
+    end
+    false
+  end
 end
 
 test_array = [1, 2, 3, 4, 5]
