@@ -46,14 +46,28 @@ module Enumerable
     length
   end
 
-  def my_map
+  def my_map(some_proc = nil)
     mapped_array = []
-    each do |i|
-      mapped_array.push(yield i)
+      each do |i|
+        mapped_array.push(yield i)
+      end
     end
     mapped_array
   end
+
+  def my_inject(initial_value = nil)
+    acc = initial_value
+    each do |i|
+      if acc.nil?
+        acc = i
+        next
+      end
+      acc = yield(acc, i)
+    end
+    acc
+  end
 end
+
 
 test_array = [1, 2, 3, 4, 5]
 
@@ -72,5 +86,12 @@ test_array = [1, 2, 3, 4, 5]
 # puts test_array.my_count
 
 # puts(test_array.my_map { |i| i * 2 })
+# test_array.inject
 
-test_array.inj
+# puts((5..10).my_inject { |sum, n| sum + n } )
+
+# multiply_els([2, 4, 5])
+
+# puts [1, 2, 3, 4, 5].my_map(Proc.new { |a| a*2 }) { |i| i*3 }
+
+# puts [1,2,3,4,5].my_map() { |i| i**3}
