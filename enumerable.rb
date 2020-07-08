@@ -41,6 +41,10 @@ module Enumerable
     end
     true
   end
+
+  def my_count
+    length
+  end
 end
 
 test_array = [1, 2, 3, 4, 5]
