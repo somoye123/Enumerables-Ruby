@@ -79,7 +79,7 @@ end
 
 test_array = [1, 2, 3, 4, 5]
 
-# test_array.my_each { |i| puts i * 2}
+test_array.my_each { |i| puts i * 2 }
 
 # test_array.my_each_with_index { |i, j| puts "#{j} is the index while #{i} is the value" }
 
