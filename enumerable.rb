@@ -20,6 +20,13 @@ module Enumerable
     end
     filtered_array
   end
+
+  def my_all?
+    each do |i|
+      return puts false unless yield i
+    end
+    puts true
+  end
 end
 
 test_array = [1, 2, 3, 4, 5]
