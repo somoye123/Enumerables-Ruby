@@ -1,6 +1,5 @@
-# Project Name
+# Implementation of Ruby’s enumerable methods
 
-Implementation of Ruby’s enumerable methods.
 This project was built to further solidify our knowledge of Ruby. It helps to understand how the common funtions used in the Ruby, functions internally.
 The project invovled the use of #loop, #yield, #call, #conditionals to build upon ruby built-in enumerable method.
 
@@ -8,7 +7,7 @@ The project invovled the use of #loop, #yield, #call, #conditionals to build upo
 
 ## Built With
 
-- Ruby,
+- Ruby
 
 ## Getting Started
 
