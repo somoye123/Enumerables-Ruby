@@ -181,30 +181,28 @@ def multiply_els(arr)
   puts(arr.my_inject { |a, b| a * b })
 end
 
-# test_array = [1, 2, 3, 4, 5]
+test_array = [1, 2, 3, 4, 5]
 
-# test_array.my_each { |i| puts i * 2 }
+test_array.my_each { |i| puts i * 2 }
 
-# test_array.my_each_with_index { |i, j| puts "#{j} is the index while #{i} is the value" }
+test_array.my_each_with_index { |i, j| puts "#{j} is the index while #{i} is the value" }
 
-# puts test_array.my_select(&:even?)
+puts test_array.my_select(&:even?)
 
-# test_array.my_all? { |number| number >= 1 }
+test_array.my_all? { |number| number >= 1 }
 
-# puts(test_array.my_any? { |number| number <= 1 })
+puts(test_array.my_any? { |number| number <= 1 })
 
-# puts(test_array.my_none? { |number| number < 1 })
+puts(test_array.my_none? { |number| number < 1 })
 
-# puts test_array.my_count
+puts test_array.my_count
 
-# puts(test_array.my_map { |i| i * 2 })
+puts(test_array.my_map { |i| i * 2 })
 
-# puts((5..10).my_inject { |sum, n| sum + n } )
+puts((5..10).my_inject { |sum, n| sum + n } )
 
-# multiply_els([2, 4, 5])
+multiply_els([2, 4, 5])
 
-# puts [1, 2, 3, 4, 5].my_map(Proc.new { |a| a*2 }) { |i| i*3 }
+puts [1, 2, 3, 4, 5].my_map(Proc.new { |a| a*2 }) { |i| i*3 }
 
-# puts [1,2,3,4,5].my_map() { |i| i**3}
-
-# puts 5.send(:-, 3)
+puts([1, 2, 3, 4, 5].my_map { |i| i**3 })
