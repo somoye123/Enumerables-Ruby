@@ -2,8 +2,9 @@
 
 Implementation of Ruby’s enumerable methods.
 
+![screenshot](./screenshot.png)
 
-The project invovled the use of loop,yield,conditionals all in a method.
+The project invovled the use of loop, yield, conditionals to build upon ruby built-in enumerable method.
 
 ## Built With
 
@@ -11,22 +12,26 @@ The project invovled the use of loop,yield,conditionals all in a method.
 
 ## Getting Started
 
-- Clone this repository
-- cd into repository directory
-- run ruby bubble_sort.rb
+To get a local copy of the repository please run the following commands on your terminal:
 
-
-To get a local copy up and running follow these simple example steps.
+- git clone https://github.com/somoye123/Enumerables-Ruby.git
+- cd into above cloned directory
+- run ruby enumerable.rb
 
 ## Authors
 
 👤 **Somoye**
 
-- Github: [@githubhandle](https://github.com/somoye123)
+- Github:[@somoye123](https://github.com/somoye123)
+- Twitter:[@ayotunde_197](https://twitter.com/ayotunde_197)
+- LinkedIn:[Somoye Ayotunde](https://www.linkedin.com/in/somoye-ayotunde-03a471161)
+- Email:[@email](https://somoye.ayotunde@gmail.com)
 
 👤 **Olawale**
 
-- Github: [@githubhandle](https://github.com/OlawaleJoseph)
+- Github:[@OlawaleJoseph](https://github.com/OlawaleJoseph)
+- Twitter:[@javanode123](https://twitter.com/javanode123)
+- LinkedIn:[olawale-adedeko](www.linkedin.com/in/olawale-adedeko)
 
 ## 🤝 Contributing
 

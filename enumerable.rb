@@ -94,7 +94,6 @@ test_array.my_each { |i| puts i * 2 }
 # puts test_array.my_count
 
 # puts(test_array.my_map { |i| i * 2 })
-# test_array.inject
 
 # puts((5..10).my_inject { |sum, n| sum + n } )
 
