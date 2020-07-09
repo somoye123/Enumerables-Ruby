@@ -199,10 +199,10 @@ puts test_array.my_count
 
 puts(test_array.my_map { |i| i * 2 })
 
-puts((5..10).my_inject { |sum, n| sum + n } )
+puts((5..10).my_inject { |sum, n| sum + n })
 
 multiply_els([2, 4, 5])
 
-puts [1, 2, 3, 4, 5].my_map(Proc.new { |a| a*2 }) { |i| i*3 }
+puts [1, 2, 3, 4, 5].my_map(proc { |a| a * 2 }) { |i| i * 3 }
 
 puts([1, 2, 3, 4, 5].my_map { |i| i**3 })
