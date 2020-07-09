@@ -204,9 +204,3 @@ test_array = [1, 2, 3, 4, 5]
 # puts [1, 2, 3, 4, 5].my_map(proc { |a| a * 2 }) { |i| i * 3 }
 
 # puts([1, 2, 3, 4, 5].my_map { |i| i**3 })
-
-hash = Hash.new
-%w(cat dog wombat).my_each_with_index { |item, index|
-  hash[item] = index
-}
-puts hash
