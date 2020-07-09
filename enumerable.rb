@@ -5,6 +5,7 @@ module Enumerable
     each do |i|
       yield i
     end
+    self
   end
 
   def my_each_with_index
@@ -15,6 +16,7 @@ module Enumerable
       yield(self[count], count)
       count += 1
     end
+    self
   end
 
   def my_select
@@ -28,8 +30,6 @@ module Enumerable
   end
 
   def my_all?(arg = nil)
-    return to_enum(:my_all) unless block_given?
-
     if block_given?
       each do |i|
         return false unless yield i
@@ -38,9 +38,9 @@ module Enumerable
       each do |i|
         return false unless arg.match(i)
       end
-    elsif !arg.nil? && arg.class == Array
+    elsif !arg.nil? && (arg.is_a? Class)
       each do |i|
-        return false unless i.class == arg.class
+        return false unless i.class == arg
       end
     else
       each do |i|
@@ -50,9 +50,7 @@ module Enumerable
     true
   end
 
-  def my_any?
-    return to_enum(:my_any) unless block_given?
-
+  def my_any?(arg)
     if block_given?
       each do |i|
         return true if yield i
@@ -61,9 +59,9 @@ module Enumerable
       each do |i|
         return true if arg.match(i)
       end
-    elsif !arg.nil? && arg.class == Array
+    elsif !arg.nil? && (arg.is_a? Class)
       each do |i|
-        return true if i.class == arg.class
+        return true if i.class == arg
       end
     else
       each do |i|
@@ -73,27 +71,25 @@ module Enumerable
     false
   end
 
-  def my_none?
-    return to_enum(:my_none) unless block_given?
-
+  def my_none?(arg)
     if block_given?
       each do |i|
-        return false if yield i
+        return true unless yield i
       end
     elsif !arg.nil? && arg.class == Regexp
       each do |i|
-        return false if arg.match(i)
+        return true unless arg.match(i)
       end
-    elsif !arg.nil? && arg.class == Array
+    elsif !arg.nil? && (arg.is_a? Class)
       each do |i|
-        return false if i.class == arg.class
+        return true unless i.class == arg
       end
     else
       each do |i|
-        return false if i == arg
+        return true unless i == arg
       end
     end
-    true
+    false
   end
 
   def my_count(arg = nil)
@@ -102,14 +98,12 @@ module Enumerable
       each do |i|
         count += 1 if yield i
       end
+      return count
     elsif !arg.nil? && arg.class == Regexp
       each do |i|
         count += 1 if arg.match(i)
       end
-    elsif !arg.nil? && arg.class == Array
-      each do |i|
-        count += 1 if i.class == arg.class
-      end
+      return count
     else
       each do |i|
         count += 1 if i == arg
