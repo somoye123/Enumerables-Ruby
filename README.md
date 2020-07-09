@@ -1,10 +1,10 @@
 # Project Name
 
 Implementation of Ruby’s enumerable methods.
+This project was built to further solidify our knowledge of Ruby. It helps to understand how the common funtions used in the Ruby, functions internally.
+The project invovled the use of #loop, #yield, #call, #conditionals to build upon ruby built-in enumerable method.
 
 ![screenshot](./screenshot.png)
-
-The project invovled the use of loop, yield, conditionals to build upon ruby built-in enumerable method.
 
 ## Built With
 
@@ -17,6 +17,7 @@ To get a local copy of the repository please run the following commands on your 
 - git clone https://github.com/somoye123/Enumerables-Ruby.git
 - cd into above cloned directory
 - run ruby enumerable.rb
+- Uncomment test code at the bottom of the page or add your preferred test code and repeaat previous step
 
 ## Authors
 
@@ -36,7 +37,7 @@ To get a local copy of the repository please run the following commands on your 
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/somoye123/Enumerables-Ruby/issues).
 
 ## Show your support
 
