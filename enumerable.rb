@@ -32,22 +32,22 @@ module Enumerable
 
     if block_given?
       each do |i|
-        return puts false unless yield i
+        return false unless yield i
       end
     elsif !arg.nil? && arg.class == Regexp
       each do |i|
-        return puts false unless arg.match(i)
+        return false unless arg.match(i)
       end
     elsif !arg.nil? && arg.class == Array
       each do |i|
-        return puts false unless i.class == arg.class
+        return false unless i.class == arg.class
       end
     else
       each do |i|
-        return puts false unless i == arg
+        return false unless i == arg
       end
     end
-    puts true
+     true
   end
 
   def my_any?
@@ -176,33 +176,37 @@ module Enumerable
 end
 
 def multiply_els(arr)
-  return to_enum(:multiply_els) unless block_given?
-
-  puts(arr.my_inject { |a, b| a * b })
+  (arr.my_inject { |a, b| a * b })
 end
 
 test_array = [1, 2, 3, 4, 5]
 
-test_array.my_each { |i| puts i * 2 }
+# test_array.my_each { |i| puts i * 2 }
 
-test_array.my_each_with_index { |i, j| puts "#{j} is the index while #{i} is the value" }
+# test_array.each_with_index { |i, j| puts "#{j} is the index while #{i} is the value" }
 
-puts test_array.my_select(&:even?)
+# puts test_array.my_select(&:even?)
 
-test_array.my_all? { |number| number >= 1 }
+# test_array.my_all? { |number| number >= 1 }
 
-puts(test_array.my_any? { |number| number <= 1 })
+# puts(test_array.my_any? { |number| number <= 1 })
 
-puts(test_array.my_none? { |number| number < 1 })
+# puts(test_array.my_none? { |number| number < 1 })
 
-puts test_array.my_count
+# puts test_array.my_count
 
-puts(test_array.my_map { |i| i * 2 })
+# puts(test_array.my_map { |i| i * 2 })
 
-puts((5..10).my_inject { |sum, n| sum + n })
+# puts((5..10).my_inject { |sum, n| sum + n })
 
-multiply_els([2, 4, 5])
+# multiply_els([2, 4, 5])
 
-puts [1, 2, 3, 4, 5].my_map(proc { |a| a * 2 }) { |i| i * 3 }
+# puts [1, 2, 3, 4, 5].my_map(proc { |a| a * 2 }) { |i| i * 3 }
 
-puts([1, 2, 3, 4, 5].my_map { |i| i**3 })
+# puts([1, 2, 3, 4, 5].my_map { |i| i**3 })
+
+hash = Hash.new
+%w(cat dog wombat).my_each_with_index { |item, index|
+  hash[item] = index
+}
+puts hash
