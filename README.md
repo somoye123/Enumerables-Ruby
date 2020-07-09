@@ -25,7 +25,6 @@ To get a local copy of the repository please run the following commands on your 
 - Github:[@somoye123](https://github.com/somoye123)
 - Twitter:[@ayotunde_197](https://twitter.com/ayotunde_197)
 - LinkedIn:[Somoye Ayotunde](https://www.linkedin.com/in/somoye-ayotunde-03a471161)
-- Email:[@email](https://somoye.ayotunde@gmail.com)
 
 👤 **Olawale**
 
